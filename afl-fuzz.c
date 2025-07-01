@@ -4282,8 +4282,8 @@ static void show_stats(void) {
   SAYF(bSTG bV bSTOP " uniq crashes : %s%-6s " bSTG bV "\n",
        unique_crashes ? cLRD : cRST, tmp);
 
-  sprintf(tmp, "%Le", correctness);
-  SAYF(bV bSTOP "     correctness : " cRST "%-34s ", tmp);
+  sprintf(tmp, "%u", singletons);
+  SAYF(bV bSTOP "     single tons : " cRST "%-34s ", tmp);
   
   sprintf(tmp, "%s%s", DI(unique_hangs),
          (unique_hangs >= KEEP_UNIQUE_HANG) ? "+" : "");
